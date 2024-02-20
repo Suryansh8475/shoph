@@ -1,0 +1,773 @@
+<?php session_start(); ?>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="index.css">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+<section id="header">
+        <a href="#"><img class="logo" src="img/logo.webp"></a>
+        <div>
+            <?php
+        $count=0;
+         if(isset($_SESSION['cart']))
+        {
+        $count=count($_SESSION['cart']);
+        }?>
+            <ul class="navbar">
+                <li><a class="active" href="index.php">Home</a></li>
+                <li><a href="shop.php">Shop</a></li>
+                <li><a href="blog.php">Blog</a></li>
+                <li><a href="about.php">About Us</a></li>
+                <li><a href="contact.php">Contact</a></li>
+                
+                <li><a href="sign.php">Sign In</a></li>
+                <li><a class='a' href="mycart.php" ><i class='bx bxs-shopping-bag'></i>My Cart(<?php echo $count ?>)</a></li>
+            </ul>
+        </div>
+    </section>
+    
+    <section id="hero">
+        <h4>Trade-in-offer</h4>
+        <h2>Super Value Deal</h2>
+        <h1>On all product</h1>
+        <p>Save more with coupons & up to 70% off!</p>
+        <a href="shop.php"><button>Shop now</button></a>
+    </section>
+    <section id="feature" class="section-p1 ">
+        <div class="fe-box">
+            <img src="img/f1.webp" width="100px">
+            <h6>Free Shoping</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/f2.png" width="100px">
+            <h6>Online Order</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/f3.png" width="100px">
+            <h6>Save Money</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/f44.png" width="100px" height="140px">
+            <h6>Promotion</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/f5.webp" width="100px" height="140px">
+            <h6>Happy sale</h6>
+        </div>
+        <div class="fe-box">
+            <img src="img/f6.png" width="100px">
+            <h6>24/7 Support</h6>
+        </div>
+
+    </section>
+    <section class="section-p1" id="product1">
+        <h2>Feature product</h2>
+        <br><br>
+        <p>Mordern Clothes With New Desigh</p>
+        <div class="pro-contaner">
+            <div class="pro">
+                <img src="product/sh1.avif">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Whites line T-shirt</h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <form action="add.php" method="POST">
+                <button type="submit" name="Add_To_Cart" class='btn btn-info'>Add to Cart</button>
+                <input type="hidden" name="Item_Name" value="Whites line T-shirt">
+                <input type="hidden" name="Price" value="899"></form>
+            </div>
+            <div class="pro">
+                <img src="product/sh2.jpg">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Whites plane T-shirt</h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <form action="add.php" method="POST">
+                <button type="submit" name="Add_To_Cart" class='btn btn-info'>Add to Cart</button>
+                <input type="hidden" name="Item_Name" value="Whites line T-shirt">
+                <input type="hidden" name="Price" value="899"></form>
+            </div>
+            <div class="pro">
+                <img src="product/sh3.webp">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Whites flower T-shirt</h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <form action="add.php" method="POST">
+                <button type="submit" name="Add_To_Cart" class='btn btn-info'>Add to Cart</button>
+                <input type="hidden" name="Item_Name" value="Whites line T-shirt">
+                <input type="hidden" name="Price" value="899"></form>
+            </div>
+            <div class="pro">
+                <img src="product/sh4.avif">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Sky blue T-shirt</h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <form action="add.php" method="POST">
+                <button type="submit" name="Add_To_Cart" class='btn btn-info'>Add to Cart</button>
+                <input type="hidden" name="Item_Name" value="Whites line T-shirt">
+                <input type="hidden" name="Price" value="899"></form>
+            </div>
+            <div class="pro">
+                <img src="product/sh5.avif">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Light Yellow T-shirt</h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <form action="add.php" method="POST">
+                <button type="submit" name="Add_To_Cart" class='btn btn-info'>Add to Cart</button>
+                <input type="hidden" name="Item_Name" value="Whites line T-shirt">
+                <input type="hidden" name="Price" value="899"></form>
+            </div>
+            <div class="pro">
+                <img src="product/sh6.jpeg">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>light brown T-shirt</h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <form action="add.php" method="POST">
+                <button type="submit" name="Add_To_Cart" class='btn btn-info'>Add to Cart</button>
+                <input type="hidden" name="Item_Name" value="Whites line T-shirt">
+                <input type="hidden" name="Price" value="899"></form>
+            </div>
+            <div class="pro">
+                <img src="product/sh7.jpeg">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>leaf T-shirt</h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <form action="add.php" method="POST">
+                <button type="submit" name="Add_To_Cart" class='btn btn-info'>Add to Cart</button>
+                <input type="hidden" name="Item_Name" value="Whites line T-shirt">
+                <input type="hidden" name="Price" value="899"></form>
+            </div>
+            <div class="pro">
+                <img src="product/sh8.jpg">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5> Color Print T-shirt</h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <form action="add.php" method="POST">
+                <button type="submit" name="Add_To_Cart" class='btn btn-info'>Add to Cart</button>
+                <input type="hidden" name="Item_Name" value="Whites line T-shirt">
+                <input type="hidden" name="Price" value="899"></form>
+            </div>
+            <div class="pro">
+                <img src="product/sh9.jpg">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Blue & Whites T-shirt</h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <form action="add.php" method="POST">
+                <button type="submit" name="Add_To_Cart" class='btn btn-info'>Add to Cart</button>
+                <input type="hidden" name="Item_Name" value="Whites line T-shirt">
+                <input type="hidden" name="Price" value="899"></form>
+            </div>
+            <div class="pro">
+                <img src="product/sh10.webp">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Sky Blue & Whites T-shirt</h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <form action="add.php" method="POST">
+                <button type="submit" name="Add_To_Cart" class='btn btn-info'>Add to Cart</button>
+                <input type="hidden" name="Item_Name" value="Whites line T-shirt">
+                <input type="hidden" name="Price" value="899"></form>
+            </div>
+            <div class="pro">
+                <img src="product/sh11.jpeg">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5> Ful Blue T-shirt</h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <form action="add.php" method="POST">
+                <button type="submit" name="Add_To_Cart" class='btn btn-info'>Add to Cart</button>
+                <input type="hidden" name="Item_Name" value="Whites line T-shirt">
+                <input type="hidden" name="Price" value="899"></form>
+            </div>
+            <div class="pro">
+                <img src="product/sh12.webp">
+                <div class="des">
+                    <span>adidas</span>
+                    <h5>Green T-shirt</h5>
+                    <div class="star">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <form action="add.php" method="POST">
+                <button type="submit" name="Add_To_Cart" class='btn btn-info'>Add to Cart</button>
+                <input type="hidden" name="Item_Name" value="Whites line T-shirt">
+                <input type="hidden" name="Price" value="899"></form>
+            </div>
+        </div>
+    </section>
+    <section class="banner">
+        <div class="ban">
+            <h5>Full Time Service</h5>
+            <h2>Upto <span>70% off</span> -All T-Shirt & Accessories</h2>
+            <button>Explore More</button>
+        </div>
+    </section>
+    <section class="section-p2" id="product2">
+        <br><br>
+        <h2>New Arrival</h2>
+        <br><br>
+        <p></p>
+        <div class="pro-contaner1">
+            <div class="pro1">
+                <img src="product/ac1.webp">
+                <div class="des1">
+                    <span>adidas</span>
+                    <h5>Whites line T-shirt</h5>
+                    <div class="star1">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro1">
+                <img src="product/ac2.jpg">
+                <div class="des1">
+                    <span>adidas</span>
+                    <h5>Whites plane T-shirt</h5>
+                    <div class="star1">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro1">
+                <img src="product/ac3.avif" height="300px">
+                <div class="des1">
+                    <span>adidas</span>
+                    <h5>Whites flower T-shirt</h5>
+                    <div class="star1">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro1">
+                <img src="product/ac4.jpg">
+                <div class="des1">
+                    <span>adidas</span>
+                    <h5>Sky blue T-shirt</h5>
+                    <div class="star1">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro1">
+                <img src="product/ac5.jpg">
+                <div class="des1">
+                    <span>adidas</span>
+                    <h5>Light Yellow T-shirt</h5>
+                    <div class="star1">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro1">
+                <img src="product/ac6.jpg" height="300px">
+                <div class="des1">
+                    <span>adidas</span>
+                    <h5>light brown T-shirt</h5>
+                    <div class="star1">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro1">
+                <img src="product/ac7.jpg">
+                <div class="des1">
+                    <span>adidas</span>
+                    <h5>leaf T-shirt</h5>
+                    <div class="star1">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro1">
+                <img src="product/ac8.jpg">
+                <div class="des1">
+                    <span>adidas</span>
+                    <h5> Color Print T-shirt</h5>
+                    <div class="star1">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro1">
+                <img src="product/ac9.jpeg">
+                <div class="des1">
+                    <span>adidas</span>
+                    <h5>Blue & Whites T-shirt</h5>
+                    <div class="star1">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro1">
+                <img src="product/ac10.webp">
+                <div class="des1">
+                    <span>adidas</span>
+                    <h5>Sky Blue & Whites T-shirt</h5>
+                    <div class="star1">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro1">
+                <img src="product/ac11.webp" height="300px">
+                <div class="des1">
+                    <span>adidas</span>
+                    <h5> Ful Blue T-shirt</h5>
+                    <div class="star1">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro1">
+                <img src="product/ac12.jpg" height="360px">
+                <div class="des1">
+                    <span>adidas</span>
+                    <h5>Green T-shirt</h5>
+                    <div class="star1">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+        </div>
+    </section>
+    <section class="gif">
+        <br><br><br>
+        <img src="product/ba2.gif" width="100%" height="400px">
+    </section>
+    <section class="section-p2" id="product3">
+        <br><br>
+        <h2>Accessories</h2>
+        <br><br>
+        <p></p>
+        <div class="pro-contaner2">
+            <div class="pro2">
+                <img src="product/fa1.jpg">
+                <div class="des2">
+                    <span>adidas</span>
+                    <h5>Whites line T-shirt</h5>
+                    <div class="star2">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro2">
+                <img src="product/fa2.jpg">
+                <div class="des2">
+                    <span>adidas</span>
+                    <h5>Whites plane T-shirt</h5>
+                    <div class="star2">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro2">
+                <img src="product/fa3.jpg" height="300px">
+                <div class="des2">
+                    <span>adidas</span>
+                    <h5>Whites flower T-shirt</h5>
+                    <div class="star2">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro2">
+                <img src="product/fa4.jpg">
+                <div class="des2">
+                    <span>adidas</span>
+                    <h5>Sky blue T-shirt</h5>
+                    <div class="star2">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro2">
+                <img src="product/fa5.jpg" height="250px">
+                <div class="des2">
+                    <span>adidas</span>
+                    <h5>Light Yellow T-shirt</h5>
+                    <div class="star2">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro2">
+                <img src="product/fa6.jpg">
+                <div class="des2">
+                    <span>adidas</span>
+                    <h5>light brown T-shirt</h5>
+                    <div class="star2">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro2">
+                <img src="product/fa7.jpg">
+                <div class="des2">
+                    <span>adidas</span>
+                    <h5>leaf T-shirt</h5>
+                    <div class="star2">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro2">
+                <img src="product/fa8.jpg">
+                <div class="des2">
+                    <span>adidas</span>
+                    <h5> Color Print T-shirt</h5>
+                    <div class="star2">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro2">
+                <img src="product/fa9.jpg" height="250px">
+                <div class="des2">
+                    <span>adidas</span>
+                    <h5>Blue & Whites T-shirt</h5>
+                    <div class="star2">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro2">
+                <img src="product/fa10.jpg">
+                <div class="des2">
+                    <span>adidas</span>
+                    <h5>Sky Blue & Whites T-shirt</h5>
+                    <div class="star2">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro2">
+                <img src="product/fa11.jpg">
+                <div class="des2">
+                    <span>adidas</span>
+                    <h5> Ful Blue T-shirt</h5>
+                    <div class="star2">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+            <div class="pro2">
+                <img src="product/fa12.jpg">
+                <div class="des2">
+                    <span>adidas</span>
+                    <h5>Green T-shirt</h5>
+                    <div class="star2">
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-star'></i>
+                    </div>
+                    <h4>₹899</h4>
+                </div>
+                <a href="cart.html"><i class='bx bx-cart-alt cart'></i></a>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="line1">
+            <img src="img/black.webp">
+        </div>
+    </section>
+    <footer class="sectiop-p1">
+        <div class="col">
+            <img src="img/logo.webp" width="90px">
+            <br><br><br> <br><br><br>
+            <h4>Contact</h4>
+            <p><strong>Address:</strong>543, Rampur Jabalpur 'Madhay Pradesh'</p>
+            <p><strong>Phone:</strong>+917162394326, +918475630572</p>
+            <p><strong> Timing & Day:</strong> 24/7</p>
+            <div class="follow">
+                <h4>Follow Us</h4>
+                <div class="icon">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About Us</h4>
+            <a href="#">About us</a>
+            <a href="#">Delevery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Condition</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="#">Sigh In</a>
+            <a href="#">View Cart</a>
+            <a href="#">My Watchlist</a>
+            <a href="#">Track My Order</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="col-install">
+            <h4>Install App</h4>
+            <p>From App Store Or Google Store</p>
+            <div class="row">
+                <img src="img/appstore1.png" width="150px">
+                <img src="img/googlestore.png" width="180px">
+            </div>
+        
+        <p>Secure Payment Gateways</p>
+        <img src="img/pay.jpg" width="280px">
+        </div>
+
+    </footer>
+</body>
+
+
+</html>
